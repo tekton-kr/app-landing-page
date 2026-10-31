@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tarch.kr/sitemap.xml
+Sitemap: https://download.tarch.kr/sitemap.xml

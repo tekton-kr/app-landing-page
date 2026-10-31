@@ -1,6 +1,6 @@
 # app-landing-page
 
-T-ARCH 현장 앱 다운로드 페이지 — https://tarch.kr
+T-ARCH 현장 앱 다운로드 페이지 — https://download.tarch.kr
 
 - 정적 HTML (빌드 없음). Cloudflare Pages가 `main` 브랜치를 그대로 배포합니다.
 - APK는 용량 제한(Pages 파일당 25MB) 때문에 이 저장소의 **GitHub Releases**에 올립니다.
