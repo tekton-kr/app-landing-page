@@ -6,4 +6,7 @@
     <image:image><image:loc>https://download.tekton.co.kr/img/og.jpg</image:loc></image:image>
     <image:image><image:loc>https://download.tekton.co.kr/img/icon-512.png</image:loc></image:image>
   </url>
+  <url><loc>https://download.tekton.co.kr/building-operations/</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://download.tekton.co.kr/facility-management/</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://download.tekton.co.kr/smart-building/</loc><lastmod>2026-10-31</lastmod></url>
 </urlset>
