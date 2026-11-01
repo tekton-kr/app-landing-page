@@ -30,11 +30,12 @@
 {"@context":"https://schema.org","@graph":[
 {"@type":"Organization","@id":"https://tekton.co.kr/#org","name":"텍톤(TEKTON)","alternateName":["텍톤","TEKTON"],"url":"https://tekton.co.kr/","logo":"https://download.tarch.kr/img/icon-512.png","email":"rok@tekton.co.kr","telephone":"+82-2-3662-9430","address":{"@type":"PostalAddress","streetAddress":"신우실로 100, 현대테라타워 감일 224호","addressLocality":"하남시","addressRegion":"경기도","postalCode":"12995","addressCountry":"KR"}},
 {"@type":"WebSite","@id":"https://download.tarch.kr/#website","url":"https://download.tarch.kr/","name":"T-ARCH(티아크) 앱 다운로드","inLanguage":"ko-KR","publisher":{"@id":"https://tekton.co.kr/#org"}},
-{"@type":"SoftwareApplication","@id":"https://download.tarch.kr/#app","name":"T-ARCH 건물운영관리","alternateName":["T-ARCH","티아크","티아크 앱"],"description":"건물 시설관리 직원을 위한 현장 앱. 민원(VOC) 접수, 업체 문의, 작업, 점검, 법정 점검을 한 앱에서 처리합니다.","applicationCategory":"BusinessApplication","operatingSystem":"Android 7.0 이상","softwareVersion":"1.1.2","fileSize":"90MB","inLanguage":"ko","url":"https://download.tarch.kr/","downloadUrl":"https://github.com/tekton-kr/app-landing-page/releases/download/v1.1.2/T-ARCH-1.1.2.apk","image":"https://download.tarch.kr/img/icon-512.png","screenshot":["https://download.tarch.kr/img/screens/01-today-v112.webp","https://download.tarch.kr/img/screens/02-work-detail-v112.webp","https://download.tarch.kr/img/screens/03-inspection-v112.webp","https://download.tarch.kr/img/screens/04-compliance-v112b.webp"],"offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"publisher":{"@id":"https://tekton.co.kr/#org"}},
+{"@type":"SoftwareApplication","@id":"https://download.tarch.kr/#app","name":"T-ARCH 건물운영관리","alternateName":["T-ARCH","티아크","티아크 앱"],"description":"건물 시설관리 직원을 위한 현장 앱. 민원(VOC) 접수, 업체 문의, 작업, 점검, 법정 점검을 한 앱에서 처리합니다.","applicationCategory":"BusinessApplication","operatingSystem":"Android 7.0 이상","softwareVersion":"1.1.2","dateModified":"2026-11-01","fileSize":"34MB","inLanguage":"ko","url":"https://download.tarch.kr/","downloadUrl":"https://github.com/tekton-kr/app-landing-page/releases/download/v1.1.2/T-ARCH-1.1.2-arm64.apk","image":"https://download.tarch.kr/img/icon-512.png","screenshot":["https://download.tarch.kr/img/screens/01-today-v112.webp","https://download.tarch.kr/img/screens/02-work-detail-v112.webp","https://download.tarch.kr/img/screens/03-inspection-v112.webp","https://download.tarch.kr/img/screens/04-compliance-v112b.webp"],"offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"publisher":{"@id":"https://tekton.co.kr/#org"}},
 {"@type":"FAQPage","@id":"https://download.tarch.kr/#faq","mainEntity":[
 {"@type":"Question","name":"iPhone에서도 쓸 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"iPhone 앱은 준비 중입니다. 지금은 Android 휴대폰에서 설치할 수 있습니다."}},
 {"@type":"Question","name":"Google Play에서는 언제 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"Google Play 출시를 준비하고 있습니다. 출시되면 이 페이지에서 바로 연결해 드립니다. 그 전까지는 이 페이지의 APK 파일로 설치하세요."}},
 {"@type":"Question","name":"로그인 계정은 어떻게 받나요?","acceptedAnswer":{"@type":"Answer","text":"관리소장이 직원 휴대폰 번호를 등록하면 그 번호와 문자 인증번호로 로그인합니다. 번호가 등록되지 않았다면 소속 건물 관리자나 텍톤에 문의해 주세요."}},
+{"@type":"Question","name":"새 버전은 어떻게 업데이트하나요?","acceptedAnswer":{"@type":"Answer","text":"이 페이지에서 새 파일을 받아 그대로 설치하면 됩니다. 앱을 지울 필요가 없고 로그인도 유지됩니다."}},
 {"@type":"Question","name":"설치 중 경고가 뜨는데 괜찮나요?","acceptedAnswer":{"@type":"Answer","text":"Google Play 밖에서 받은 앱을 설치할 때 Android가 기본으로 보여 주는 안내입니다. 이 페이지(download.tarch.kr)에서 받은 파일인지 확인하고 설치하세요."}}
 ]}
 ]}
@@ -95,9 +96,14 @@ h1 em{font-style:normal;color:var(--accent)}
 .meta span{white-space:nowrap}
 .ios-note{display:none;margin-top:16px;font-size:15px;color:var(--mint)}
 .is-ios .ios-note{display:block}
+.alt-apk{margin:14px 0 0;font-size:14px;color:var(--on-dark-3)}
+.alt-apk a,.side dd a{color:var(--mint);text-underline-offset:3px}
+.badges{margin-top:28px;display:flex;flex-wrap:wrap;gap:8px}
+.badges span{display:inline-flex;align-items:center;gap:7px;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);font-size:13.5px;color:var(--on-dark-2)}
+.badges svg{width:15px;height:15px;color:var(--accent)}
 
-.hero-visual{position:relative;display:flex;justify-content:center;gap:18px;min-height:420px}
-.phone{width:min(46%,250px);border-radius:28px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.08);background:#0f291f;aspect-ratio:9/16}
+.hero-visual{position:relative;display:flex;justify-content:center;align-items:flex-start;gap:18px;padding-bottom:48px}
+.phone{flex:none;width:min(44%,250px);height:auto;border-radius:28px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.08);background:#0f291f;aspect-ratio:9/16}
 .phone img{width:100%;height:100%;object-fit:cover}
 .phone.second{transform:translateY(48px)}
 .qr-card{position:absolute;right:-6px;bottom:-24px;background:#fff;color:var(--ink);border-radius:14px;padding:14px;display:none;align-items:center;gap:14px;box-shadow:0 18px 40px -12px rgba(0,0,0,.5)}
@@ -118,6 +124,10 @@ h2{margin:16px 0 0;font-size:clamp(28px,3.4vw,42px);line-height:1.22;letter-spac
 @media(min-width:1024px){.features{grid-template-columns:repeat(3,1fr)}}
 .feat{border:1px solid var(--line);border-radius:var(--radius);padding:26px;background:#fff}
 .feat .k{font-size:13px;font-weight:700;letter-spacing:.12em;color:var(--accent-ink)}
+.feat .ic{width:44px;height:44px;border-radius:12px;background:var(--mist);color:var(--accent-ink);display:grid;place-items:center;margin-bottom:16px}
+.feat .ic svg{width:22px;height:22px}
+.feat{transition:border-color .15s ease,box-shadow .15s ease}
+a.feat:hover{border-color:#b9cbc3;box-shadow:0 10px 28px -18px rgba(11,31,23,.35)}
 .feat h3{margin:8px 0 0;font-size:20px;letter-spacing:-.015em}
 .feat ul{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:8px;color:var(--ink-2);font-size:16px}
 .feat li{display:flex;gap:10px}
@@ -148,6 +158,10 @@ h2{margin:16px 0 0;font-size:clamp(28px,3.4vw,42px);line-height:1.22;letter-spac
 .side dd{margin:0;color:var(--on-dark)}
 .side code{font-family:ui-monospace,"JetBrains Mono",Menlo,monospace;font-size:13px;word-break:break-all;color:var(--on-dark-2)}
 .side .btn{margin-top:24px;width:100%;justify-content:center}
+.side .new{margin-top:22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1)}
+.side .new b{font-size:15px}
+.side .new ul{margin:10px 0 0;padding:0 0 0 18px;color:var(--on-dark-2);font-size:14.5px;display:grid;gap:6px}
+.side .alt{margin:14px 0 0;text-align:center;font-size:14px;color:var(--on-dark-3)}
 
 /* faq */
 .faq{margin-top:36px;border-top:1px solid var(--line)}
@@ -202,16 +216,21 @@ footer .fine{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,
       <div class="cta" id="cta">
         <a class="btn btn-primary js-apk" href="#" data-apk>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
-          Android 앱 받기 <small>APK · 90MB</small>
+          Android 앱 받기 <small>APK · 34MB</small>
         </a>
         <span class="btn btn-ghost" aria-label="Google Play 출시 준비 중">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.6 2.4c-.3.3-.5.8-.5 1.4v16.4c0 .6.2 1.1.5 1.4l9.2-9.6-9.2-9.6Zm10.6 8.2 2.7-2.8L6.4 1.3c-.4-.2-.8-.3-1.1-.2l9.9 9.5Zm0 2.8-9.9 9.5c.3.1.7 0 1.1-.2l11.5-6.5-2.7-2.8Zm4.2-4.7-3 1.7 2.9 3 3-1.7c.9-.5.9-1.9 0-2.4l-2.9-1.6Z"/></svg>
           Google Play <small>출시 준비 중</small>
         </span>
       </div>
-      <p class="ios-note"><b>1.1.2 정식 버전입니다.</b> 관리소장이 등록한 직원 휴대폰 번호와 문자 인증번호로 로그인하고, 접수한 민원과 작업은 PC 웹과 같은 서버에 저장됩니다.</p>
       <p class="ios-note">iPhone 앱은 준비 중입니다. 지금은 Android 휴대폰에서 설치할 수 있습니다.</p>
-      <div class="meta"><span>버전 <span data-ver>1.1.2</span></span><span>Android 7.0 이상</span><span>무료</span></div>
+      <div class="meta"><span>버전 <span data-ver>1.1.2</span></span><span>업데이트 <span data-date>2026.11.01</span></span><span>Android 7.0 이상</span><span>무료</span></div>
+      <p class="alt-apk">설치가 안 되는 오래된 휴대폰이면 <a href="#" data-apk32>32비트용 파일(31MB)</a>을 받으세요.</p>
+      <div class="badges">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18h2"/></svg>문자 인증 로그인</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>PC 웹과 같은 서버</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6L12 3Z"/><path d="m9 12 2 2 4-4"/></svg>텍톤 서명 앱</span>
+      </div>
     </div>
     <div class="hero-visual" aria-hidden="true">
       <div class="phone"><img src="/img/screens/01-today-v112.webp" alt="" width="720" height="1280" fetchpriority="high"></div>
@@ -227,12 +246,12 @@ footer .fine{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,
     <h2 id="f-title">현장에서 하는 일을<br>한 앱에 모았습니다.</h2>
     <p class="sub">민원과 업체 문의 접수부터 작업, 점검, 인수인계까지 건물 단위로 처리합니다.</p>
     <div class="features">
-      <article class="feat"><div class="k">VOC · INQUIRY</div><h3>민원·업체 문의</h3><ul><li>입주사 민원을 바로 접수하고 처리까지 기록</li><li>고장은 사진만 찍으면 협력업체에 바로 문의</li><li>접수·원격 점검·방문 예정 진행 단계를 한눈에</li></ul></article>
-      <article class="feat"><div class="k">WORK</div><h3>작업</h3><ul><li>고장·민원 접수부터 배정, 처리, 완료까지 기록</li><li>오늘 할 점검과 남은 작업을 먼저</li><li>사진, 사용 자재, 처리 내용을 작업마다</li></ul></article>
-      <article class="feat"><div class="k">INSPECTION</div><h3>점검·순찰</h3><ul><li>체크리스트를 한 문항씩 진행</li><li>예방정비 계획은 기한에 맞춰 오늘 점검으로</li><li>검침 입력과 이상 값 확인</li></ul></article>
-      <article class="feat"><div class="k">COMPLIANCE</div><h3>법정 점검·선임</h3><ul><li>승강기, 소방, 전기 등 법정 점검을 D-day로</li><li>시행 기록과 선임 현황을 한곳에서</li></ul></article>
-      <article class="feat"><div class="k">SAFETY</div><h3>안전·작업허가</h3><ul><li>화기·고소·밀폐·전기 작업허가 신청과 팀장 승인</li><li>작업 전 안전 점검 체크</li></ul></article>
-      <article class="feat"><div class="k">OPERATIONS</div><h3>설비·운영</h3><ul><li>설비 대장과 이력</li><li>자재·재고 입출고와 부족 알림</li><li>공지·회람, 업무일지, 월간 리포트</li></ul></article>
+      <article class="feat"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2Z"/><path d="M8 8h8M8 12h5"/></svg></div><div class="k">VOC · INQUIRY</div><h3>민원·업체 문의</h3><ul><li>입주사 민원을 바로 접수하고 처리까지 기록</li><li>고장은 사진만 찍으면 협력업체에 바로 문의</li><li>접수·원격 점검·방문 예정 진행 단계를 한눈에</li></ul></article>
+      <article class="feat"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4Z"/></svg></div><div class="k">WORK</div><h3>작업</h3><ul><li>고장·민원 접수부터 배정, 처리, 완료까지 기록</li><li>오늘 할 점검과 남은 작업을 먼저</li><li>사진, 사용 자재, 처리 내용을 작업마다</li></ul></article>
+      <article class="feat"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 13l2 2 4-4"/></svg></div><div class="k">INSPECTION</div><h3>점검·순찰</h3><ul><li>체크리스트를 한 문항씩 진행</li><li>예방정비 계획은 기한에 맞춰 오늘 점검으로</li><li>검침 입력과 이상 값 확인</li></ul></article>
+      <article class="feat"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17M9 15l2 2 4-4"/></svg></div><div class="k">COMPLIANCE</div><h3>법정 점검·선임</h3><ul><li>승강기, 소방, 전기 등 법정 점검을 D-day로</li><li>시행 기록과 선임 현황을 한곳에서</li></ul></article>
+      <article class="feat"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6L12 3Z"/><path d="M12 8v5M12 16h.01"/></svg></div><div class="k">SAFETY</div><h3>안전·작업허가</h3><ul><li>화기·고소·밀폐·전기 작업허가 신청과 팀장 승인</li><li>작업 전 안전 점검 체크</li></ul></article>
+      <article class="feat"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8 12 3 3 8v8l9 5 9-5Z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></div><div class="k">OPERATIONS</div><h3>설비·운영</h3><ul><li>설비 대장과 이력</li><li>자재·재고 입출고와 부족 알림</li><li>공지·회람, 업무일지, 월간 리포트</li></ul></article>
     </div>
   </div>
 </section>
@@ -271,12 +290,22 @@ footer .fine{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,
         <dl>
           <dt>앱 이름</dt><dd>T-ARCH 건물운영관리</dd>
           <dt>버전</dt><dd><span data-ver>1.1.2</span></dd>
-          <dt>크기</dt><dd>90MB (APK)</dd>
+          <dt>업데이트</dt><dd><span data-date>2026.11.01</span></dd>
+          <dt>크기</dt><dd>34MB (APK, 64비트)</dd>
           <dt>지원</dt><dd>Android 7.0 이상</dd>
           <dt>배포</dt><dd>텍톤(TEKTON)</dd>
-          <dt>SHA-256</dt><dd><code data-sha>6ca16f15132d0ba199bb27d4f8cc88790ee118aa2c36459b99fd1d2f3f8b2f55</code></dd>
+          <dt>SHA-256</dt><dd><code data-sha>719318722b3bb95baa73f2123587cbe1089f2a8fa770d67383a51080639866a9</code></dd>
         </dl>
-        <a class="btn btn-primary js-apk" href="#" data-apk>Android 앱 받기 <small>APK</small></a>
+        <a class="btn btn-primary js-apk" href="#" data-apk>Android 앱 받기 <small>APK · 34MB</small></a>
+        <p class="alt">오래된 휴대폰용: <a href="#" data-apk32 style="color:var(--mint)">32비트 파일(31MB)</a></p>
+        <div class="new">
+          <b>이번 버전에서 달라진 점</b>
+          <ul>
+            <li>첫 화면에서 민원 접수와 업체 문의를 바로 시작</li>
+            <li>위치 목록에 없는 곳은 접수 화면에서 바로 추가</li>
+            <li>휴대폰에 맞는 파일만 받아 용량 90MB → 34MB</li>
+          </ul>
+        </div>
       </aside>
     </div>
   </div>
@@ -303,6 +332,7 @@ footer .fine{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,
       <details><summary>Google Play에서는 언제 받을 수 있나요?</summary><p>Google Play 출시를 준비하고 있습니다. 출시되면 이 페이지에서 바로 연결해 드립니다. 그 전까지는 이 페이지의 APK 파일로 설치하세요. 이 페이지에서 받은 앱과 Google Play 앱은 서명이 달라 그대로 업데이트되지 않을 수 있습니다. Google Play 버전을 설치할 때는 먼저 이 앱을 지워 주세요.</p></details>
       <details><summary>로그인 계정은 어떻게 받나요?</summary><p>관리소장이 직원 휴대폰 번호를 등록하면 그 번호와 문자 인증번호로 로그인합니다. 번호가 등록되지 않았다면 소속 건물 관리소장이나 텍톤에 문의해 주세요.</p></details>
       <details><summary>입력한 기록은 어디에 저장되나요?</summary><p>민원과 작업, 작업 사진, 사용 자재는 PC 웹과 같은 서버에 저장됩니다. 업체 문의의 진행 단계와 근무표·업무일지 같은 일부 기록은 서버 연결을 준비하는 동안 그 휴대폰에만 저장되고, 앱 화면에 그렇게 표시됩니다. 이전 체험 버전에서 입력한 예시 기록은 서버로 옮겨지지 않습니다.</p></details>
+      <details><summary>새 버전은 어떻게 업데이트하나요?</summary><p>이 페이지에서 새 파일을 받아 그대로 설치하면 됩니다. 앱을 지울 필요가 없고 로그인도 유지됩니다. 단, 체험 버전(1.1.0 이하)을 쓰던 휴대폰은 앱을 지우고 새로 설치해 주세요.</p></details>
       <details><summary>설치 중 경고가 뜨는데 괜찮나요?</summary><p>Google Play 밖에서 받은 앱을 설치할 때 Android가 기본으로 보여 주는 안내입니다. 이 페이지(download.tarch.kr)에서 받은 파일인지 확인하고 설치하세요. 파일이 같은지 확인하려면 위의 SHA-256 값과 비교할 수 있습니다.</p></details>
       <details><summary>문의는 어디로 하나요?</summary><p>전화 <a href="tel:0236629430">02-3662-9430</a> 또는 메일 <a href="mailto:rok@tekton.co.kr">rok@tekton.co.kr</a>로 연락 주세요.</p></details>
     </div>
@@ -335,16 +365,20 @@ footer .fine{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,
   </div>
 </footer>
 
-<div class="sticky" id="sticky"><a class="btn btn-primary js-apk" href="#" data-apk>Android 앱 받기 <small>APK · 90MB</small></a></div>
+<div class="sticky" id="sticky"><a class="btn btn-primary js-apk" href="#" data-apk>Android 앱 받기 <small>APK · 34MB</small></a></div>
 
 <script>
 (function(){
-  // 새 버전을 올리면 이 두 값만 바꾼다 (버전, APK 주소).
+  // 새 버전을 올리면 이 값과 화면의 크기·SHA-256을 바꾼다 (README 참고).
   var APP = {
     version: "1.1.2",
-    apk: "https://github.com/tekton-kr/app-landing-page/releases/download/v1.1.2/T-ARCH-1.1.2.apk"
+    date: "2026.11.01",
+    apk: "https://github.com/tekton-kr/app-landing-page/releases/download/v1.1.2/T-ARCH-1.1.2-arm64.apk",
+    apk32: "https://github.com/tekton-kr/app-landing-page/releases/download/v1.1.2/T-ARCH-1.1.2-32bit.apk"
   };
   document.querySelectorAll("[data-apk]").forEach(function(a){ a.href = APP.apk; a.setAttribute("rel","noopener"); });
+  document.querySelectorAll("[data-apk32]").forEach(function(a){ a.href = APP.apk32; a.setAttribute("rel","noopener"); });
+  document.querySelectorAll("[data-date]").forEach(function(s){ s.textContent = APP.date; });
   document.querySelectorAll("[data-ver]").forEach(function(s){ s.textContent = APP.version; });
   var ua = navigator.userAgent || "";
   var ios = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
