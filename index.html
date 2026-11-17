@@ -313,6 +313,12 @@ footer .fine{border-top-color:var(--t-line)}
 .cta .btn-play{min-width:220px}
 @media(max-width:560px){.cta .btn-play{width:100%;justify-content:center}}
 .side .btn-play{margin-top:24px}
+/* 휴대폰 손보기 (2026-11-18): 위 메뉴 누르는 칸 44px, 고정 버튼이 맨 아래 글을 가리지 않게, 작은 글자 14px로 */
+header.top .brand,.top nav a{min-height:44px;display:inline-flex;align-items:center}
+.badges span{font-size:14px}
+.note{font-size:14px}
+@media(max-width:959px){footer{padding-bottom:calc(112px + env(safe-area-inset-bottom))}}
+.is-ios footer{padding-bottom:40px}
 </style>
 </head>
 <body>
@@ -489,7 +495,13 @@ footer .fine{border-top-color:var(--t-line)}
   if (ios) document.documentElement.classList.add("is-ios");
   var cta = document.getElementById("cta"), sticky = document.getElementById("sticky");
   if ("IntersectionObserver" in window && cta && sticky) {
-    new IntersectionObserver(function(e){ sticky.classList.toggle("show", !e[0].isIntersecting); }).observe(cta);
+    // 화면에 다른 Play 버튼(첫 화면·앱 정보 상자)이 보이면 아래 고정 버튼은 숨긴다. 같은 버튼이 두 개 겹쳐 보이지 않게.
+    var seen = new Set();
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(x){ if (x.isIntersecting) seen.add(x.target); else seen.delete(x.target); });
+      sticky.classList.toggle("show", seen.size === 0);
+    });
+    document.querySelectorAll(".btn-play").forEach(function(b){ if (!sticky.contains(b)) io.observe(b); });
   }
 })();
 </script>
