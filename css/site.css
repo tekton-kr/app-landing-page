@@ -291,3 +291,17 @@ footer .fine{border-top-color:var(--t-line)}
 .related a span{color:var(--t-ink-3)}
 .shot-row img{box-shadow:0 12px 28px -18px rgba(23,26,32,.4);background:var(--t-g3)}
 .small-note{color:var(--t-ink-3)}
+
+/* Google Play 배지: 검정 판 + 4색 Play 로고 + 두 줄 글자(Google 공식 배지 배치) */
+.btn-play{display:inline-flex;align-items:center;gap:14px;min-height:60px;padding:0 26px 0 20px;border-radius:10px;background:#000;color:#fff;text-decoration:none;box-shadow:inset 0 0 0 1px #a6a6a6;transition:background .33s ease,transform .15s ease}
+.btn-play:hover{background:#171a20}
+.btn-play:active{transform:scale(.98)}
+.btn-play .gp-logo{width:30px;height:30px;flex:none}
+.btn-play .gp-text{display:flex;flex-direction:column;line-height:1.1;text-align:left}
+.btn-play .gp-text small{font-size:12px;font-weight:500;letter-spacing:.02em;color:#fff;opacity:.92}
+.btn-play .gp-text b{font-size:22px;font-weight:600;letter-spacing:-.01em;margin-top:3px}
+.btn-play.full{display:flex;width:100%;justify-content:center}
+.sticky .btn-play{display:flex;width:100%;justify-content:center;min-height:56px}
+.cta .btn-play{min-width:220px}
+@media(max-width:560px){.cta .btn-play{width:100%;justify-content:center}}
+.cta-box .btns .btn-play{min-height:52px}
