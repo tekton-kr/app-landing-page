@@ -166,3 +166,142 @@ footer .fine{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,
 .shot-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
 .shot-row img{border-radius:14px;aspect-ratio:9/16;width:100%;height:auto;box-shadow:0 10px 24px -14px rgba(11,31,23,.4)}
 .small-note{font-size:13px;color:var(--ink-3);margin-top:10px}
+
+/* ── 테슬라식 색·모양 (2026-11-18) ──
+   T-ARCH 웹 tesla-theme.css와 같은 규칙: 밝은 회색 바탕과 흰 판, 글자는 검정 계열 3단계,
+   파랑(#3e6ae1) 하나는 주 버튼·초점에만. 초록·민트·노랑 강조는 쓰지 않는다. 글꼴 Wanted Sans.
+   구조·문구·순서는 그대로 두고 색·글꼴·모양만 바꾼다. */
+:root{
+  --t-ink:#171a20;--t-ink-2:#393c41;--t-ink-3:#5c5e62;--t-blue:#3e6ae1;--t-blue-h:#3457b1;
+  --t-g1:#f4f4f4;--t-g2:#eeeeee;--t-g3:#e4e4e4;--t-line:#e2e2e2;
+  --ink:var(--t-ink);--ink-2:var(--t-ink-2);--ink-3:var(--t-ink-3);
+  --accent:var(--t-blue);--accent-ink:var(--t-ink);--mint:var(--t-ink);
+  --paper:var(--t-g1);--line:var(--t-line);--mist:var(--t-g1);
+  --on-dark:var(--t-ink);--on-dark-2:var(--t-ink-2);--on-dark-3:var(--t-ink-3);
+  --forest-950:var(--t-g2);--forest-900:var(--t-g3);--forest-800:var(--t-g3);
+  --radius:12px;
+}
+body{font-family:"Wanted Sans Variable","Wanted Sans","Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,system-ui,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;color:var(--t-ink);background:#fff;-webkit-font-smoothing:antialiased}
+.eyebrow{font-weight:500;letter-spacing:.16em;color:var(--t-ink-3)}
+.eyebrow i,.dark .eyebrow i{width:14px;height:2px;background:var(--t-ink)}
+.dark .eyebrow{color:var(--t-ink-3)}
+
+/* 위 막대: 투명 위 검정 글자, 메뉴는 눌렀을 때 회색 판(테슬라 상단 메뉴처럼) */
+.brand{color:var(--t-ink);font-weight:600}
+.brand img{border-radius:6px}
+.top nav a{color:var(--t-ink-2);font-weight:500;padding:8px 14px;margin-left:2px;border-radius:4px;transition:background .33s ease}
+.top nav a:hover{color:var(--t-ink);background:rgba(23,26,32,.06)}
+
+/* 첫 화면: 밝은 회색 판, 큰 글자는 검정·회색 두 단계 */
+.hero{background:linear-gradient(180deg,var(--t-g1) 0%,var(--t-g2) 100%);color:var(--t-ink)}
+.hero:before{background:radial-gradient(55% 65% at 78% 30%,rgba(255,255,255,.85),transparent 70%)}
+.app-id img{border-radius:14px;box-shadow:0 0 0 1px rgba(23,26,32,.06)}
+.app-id b{font-weight:600}
+.app-id span{color:var(--t-ink-3)}
+h1{font-weight:600;letter-spacing:-.03em}
+h1 em{color:var(--t-ink-3)}
+.lead{color:var(--t-ink-3)}
+.btn{border-radius:4px;font-weight:600;font-size:16px;min-height:52px;padding:0 28px;min-width:220px;justify-content:center;border:0;transition:background .33s ease,color .33s ease,box-shadow .33s ease}
+.btn:active{transform:none}
+.btn svg{width:20px;height:20px}
+.btn-primary{background:var(--t-blue);color:#fff}
+.btn-primary:hover{background:var(--t-blue-h)}
+.btn-primary small{color:#fff;opacity:.8;font-weight:500}
+.btn-ghost,a.btn-ghost{background:#fff;color:var(--t-ink-2);border:0}
+a.btn-ghost:hover{background:#fff;color:var(--t-ink);box-shadow:inset 0 0 0 2px var(--t-ink)}
+.btn-ghost small{background:var(--t-g1);color:var(--t-ink-3);border-radius:4px;font-weight:500}
+.meta{color:var(--t-ink-3)}
+.ios-note{color:var(--t-ink-2)}
+.alt-apk{color:var(--t-ink-3)}
+.alt-apk a,.side dd a,.side .alt a,.install .notice a,.faq p a{color:var(--t-ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.badges span{background:rgba(255,255,255,.7);border:0;border-radius:4px;color:var(--t-ink-2);font-weight:500}
+.badges svg{color:var(--t-ink-3)}
+.phone{box-shadow:0 28px 56px -28px rgba(23,26,32,.45),0 0 0 1px rgba(23,26,32,.06);background:var(--t-g3)}
+.qr-card{border-radius:8px;box-shadow:0 16px 36px -18px rgba(23,26,32,.35)}
+.qr-card p{color:var(--t-ink-3)}
+.qr-card b{color:var(--t-ink);font-weight:600}
+
+/* 본문 구역 */
+h2{font-weight:600;letter-spacing:-.025em}
+.sub{color:var(--t-ink-3)}
+.feat{background:var(--t-g1);border:0;border-radius:12px}
+a.feat:hover{background:var(--t-g2);border-color:transparent;box-shadow:none}
+.feat .k{color:var(--t-ink-3);font-weight:500}
+.feat .ic{background:#fff;color:var(--t-ink);border-radius:8px}
+.feat h3{font-weight:600}
+.feat ul{color:var(--t-ink-2)}
+.feat li:before{background:var(--t-ink-3)}
+.screens-sec{background:var(--t-g1)}
+.rail img{border-radius:16px;box-shadow:0 12px 28px -18px rgba(23,26,32,.4);background:var(--t-g3)}
+.rail figcaption{color:var(--t-ink-2);font-weight:500}
+.note{color:var(--t-ink-3)}
+
+/* 설치 */
+.steps .n{color:var(--t-ink);font-weight:600}
+.steps b{font-weight:600}
+.steps p{color:var(--t-ink-2)}
+.steps b small.tag{background:var(--t-g1);color:var(--t-ink-2);border-radius:4px;font-weight:500}
+.steps .path{background:var(--t-g1);border-radius:8px}
+.steps .path em{border-color:var(--t-line);border-radius:4px;font-weight:500}
+.install .notice{background:var(--t-g1);border:0;border-radius:8px;color:var(--t-ink-2)}
+.install .notice b{color:var(--t-ink)}
+.side{background:var(--t-g1);color:var(--t-ink);border-radius:12px}
+.side h3{font-weight:600}
+.side dt{color:var(--t-ink-3)}
+.side dd{color:var(--t-ink)}
+.side code{color:var(--t-ink-2)}
+.side .new{border-top-color:var(--t-line)}
+.side .new ul{color:var(--t-ink-2)}
+.side .alt{color:var(--t-ink-3)}
+
+/* 자주 묻는 질문 */
+.faq summary{font-weight:600}
+.faq p{color:var(--t-ink-2)}
+
+/* 아래 정보: 밝은 회색, 작은 회색 글자(테슬라 하단처럼) */
+footer{background:var(--t-g1);color:var(--t-ink-3)}
+footer a{color:var(--t-ink-2)}
+footer nav a:hover{color:var(--t-ink)}
+footer .fine{border-top-color:var(--t-line)}
+
+/* 휴대폰 아래 고정 버튼: 흰 반투명 막대 */
+.sticky{background:rgba(255,255,255,.92);box-shadow:0 -1px 0 var(--t-line)}
+.sticky .btn{min-width:0}
+:focus-visible{outline:2px solid var(--t-blue);outline-offset:3px}
+@media(max-width:560px){.btn{width:100%;min-width:0}}
+
+/* 소개 글 페이지 */
+.page-hero{background:linear-gradient(180deg,var(--t-g1) 0%,var(--t-g2) 100%);color:var(--t-ink)}
+.page-hero:before{background:radial-gradient(55% 65% at 85% 20%,rgba(255,255,255,.85),transparent 70%)}
+.crumb{color:var(--t-ink-3)}
+.crumb a{color:var(--t-ink-2)}
+.prose h2,.prose h3{font-weight:600}
+.prose p,.prose ul{color:var(--t-ink-2)}
+.prose li:before{background:var(--t-ink-3)}
+.table th{color:var(--t-ink-3);font-weight:600}
+.table td:first-child{font-weight:600}
+.cta-box{background:var(--t-g1);color:var(--t-ink);border-radius:12px}
+.cta-box p{color:var(--t-ink-3)}
+.cta-box b{color:var(--t-ink);font-weight:600}
+.btn-line{background:#fff;color:var(--t-ink-2);border:0}
+.btn-line:hover{background:#fff;color:var(--t-ink);box-shadow:inset 0 0 0 2px var(--t-ink)}
+.related a{background:var(--t-g1);border:0;border-radius:12px}
+.related a:hover{background:var(--t-g2);border-color:transparent}
+.related a b{font-weight:600}
+.related a span{color:var(--t-ink-3)}
+.shot-row img{box-shadow:0 12px 28px -18px rgba(23,26,32,.4);background:var(--t-g3)}
+.small-note{color:var(--t-ink-3)}
+
+/* Google Play 배지: 검정 판 + 4색 Play 로고 + 두 줄 글자(Google 공식 배지 배치) */
+.btn-play{display:inline-flex;align-items:center;gap:14px;min-height:60px;padding:0 26px 0 20px;border-radius:10px;background:#000;color:#fff;text-decoration:none;box-shadow:inset 0 0 0 1px #a6a6a6;transition:background .33s ease,transform .15s ease}
+.btn-play:hover{background:#171a20}
+.btn-play:active{transform:scale(.98)}
+.btn-play .gp-logo{width:30px;height:30px;flex:none}
+.btn-play .gp-text{display:flex;flex-direction:column;line-height:1.1;text-align:left}
+.btn-play .gp-text small{font-size:12px;font-weight:500;letter-spacing:.02em;color:#fff;opacity:.92}
+.btn-play .gp-text b{font-size:22px;font-weight:600;letter-spacing:-.01em;margin-top:3px}
+.btn-play.full{display:flex;width:100%;justify-content:center}
+.sticky .btn-play{display:flex;width:100%;justify-content:center;min-height:56px}
+.cta .btn-play{min-width:220px}
+@media(max-width:560px){.cta .btn-play{width:100%;justify-content:center}}
+.cta-box .btns .btn-play{min-height:52px}
