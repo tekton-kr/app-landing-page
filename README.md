@@ -19,4 +19,4 @@ T-ARCH 현장 앱 다운로드 페이지 — https://download.tarch.kr
 - 1.1.2부터 CPU별 파일이라 versionCode가 `1000×CPU번호 + 빌드번호`입니다 (64비트 2005, 32비트 1005). 다음 버전도 반드시 `--split-per-abi`로 빌드하세요. 하나로 합친 APK(versionCode 6 등)를 올리면 이미 설치한 휴대폰에서 "낮은 버전"이라 업데이트되지 않습니다.
 - 이미지 파일을 바꿀 때는 이름을 새로 지으세요. Cloudflare가 이미지를 7일 동안 캐시합니다.
 
-Google Play 정식 출시 후에는 `Google Play 출시 준비 중` 버튼을 스토어 링크로 바꿉니다.
+Google Play 정식 출시(2026-11) 후 기본 버튼은 Google Play 스토어 링크이고, APK는 Play 스토어를 쓸 수 없는 휴대폰용 보조 방법입니다.
