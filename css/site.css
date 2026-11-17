@@ -305,3 +305,6 @@ footer .fine{border-top-color:var(--t-line)}
 .cta .btn-play{min-width:220px}
 @media(max-width:560px){.cta .btn-play{width:100%;justify-content:center}}
 .cta-box .btns .btn-play{min-height:52px}
+/* 휴대폰 손보기 (2026-11-18): 위 메뉴 누르는 칸 44px */
+header.top .brand,.top nav a{min-height:44px;display:inline-flex;align-items:center}
+.note,.small-note{font-size:14px}
