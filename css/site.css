@@ -311,14 +311,13 @@ footer .fine{border-top-color:var(--t-line)}
    모서리 12px, 선 1px. 큰 숫자는 D-DIN. 위 테슬라식 층 위에 덮어쓴다. */
 @font-face{font-family:"DDIN";src:url("/fonts/D-DIN.otf") format("opentype");font-weight:400;font-display:swap}
 :root{
-  --t-ink:#141517;--t-ink-2:#3a3d42;--t-ink-3:#6b6f76;--t-blue:#141517;--t-blue-h:#2a2c30;
-  --t-g1:#f3f4f6;--t-g2:#f3f4f6;--t-g3:#e9eaed;--t-line:#e2e4e8;
+  --t-ink:#171a20;--t-ink-2:#393c41;--t-ink-3:#5c5e62;--t-blue:#141517;--t-blue-h:#2a2c30;
+  --t-g1:#f4f4f4;--t-g2:#f4f4f4;--t-g3:#e9eaed;--t-line:#e2e4e8;
   --accent:#141517;--radius:12px;
 }
 body{font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,system-ui,"Apple SD Gothic Neo","Noto Sans KR",sans-serif}
 .brand{gap:10px}
-.brand .mark{width:30px;height:30px;flex:none}
-.brand .word{height:15px;width:83px;flex:none}
+.brand .logo{height:26px;width:98px;flex:none;display:block}
 .hero{background:var(--t-g1)}
 .hero:before{display:none}
 .btn{border-radius:12px}
@@ -333,7 +332,7 @@ a.btn-ghost:hover{box-shadow:none;border-color:#141517}
 .feat{border:1px solid transparent}
 a.feat:hover{background:var(--t-g1);border-color:#141517}
 .qr-card{box-shadow:none;border:1px solid var(--t-line);border-radius:12px}
-.eyebrow i,.dark .eyebrow i{width:8px;height:8px;border-radius:50%;background:#e5343f}
+.eyebrow i,.dark .eyebrow i{width:8px;height:8px;border-radius:50%;background:#e31937}
 .related a:hover{border-color:#141517}
 .sticky{background:rgba(255,255,255,.94);box-shadow:none;border-top:1px solid var(--t-line)}
 :focus-visible{outline:2px solid #141517}
