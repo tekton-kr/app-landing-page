@@ -305,3 +305,35 @@ footer .fine{border-top-color:var(--t-line)}
 .cta .btn-play{min-width:220px}
 @media(max-width:560px){.cta .btn-play{width:100%;justify-content:center}}
 .cta-box .btns .btn-play{min-height:52px}
+
+/* ── 모노 (앱 콘셉트 시안 v5, 2026-11-18 2차) ──
+   첫 페이지와 같은 규칙: 흰색·회색·검정만, 빨강은 작은 위험 점에만. 파랑 버튼·그림자 없음.
+   모서리 12px, 선 1px. 큰 숫자는 D-DIN. 위 테슬라식 층 위에 덮어쓴다. */
+@font-face{font-family:"DDIN";src:url("/fonts/D-DIN.otf") format("opentype");font-weight:400;font-display:swap}
+:root{
+  --t-ink:#141517;--t-ink-2:#3a3d42;--t-ink-3:#6b6f76;--t-blue:#141517;--t-blue-h:#2a2c30;
+  --t-g1:#f3f4f6;--t-g2:#f3f4f6;--t-g3:#e9eaed;--t-line:#e2e4e8;
+  --accent:#141517;--radius:12px;
+}
+body{font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,system-ui,"Apple SD Gothic Neo","Noto Sans KR",sans-serif}
+.brand{gap:10px}
+.brand .mark{width:30px;height:30px;flex:none}
+.brand .word{height:15px;width:83px;flex:none}
+.hero{background:var(--t-g1)}
+.hero:before{display:none}
+.btn{border-radius:12px}
+.btn-primary{background:#141517;color:#fff}
+.btn-primary:hover{background:#2a2c30}
+a.btn-ghost{border:1px solid #d3d6db}
+a.btn-ghost:hover{box-shadow:none;border-color:#141517}
+.btn-play{border-radius:12px;box-shadow:none;border:1px solid #000}
+.phone{border:1px solid #d3d6db;box-shadow:none;background:#fff;padding:6px;border-radius:34px;aspect-ratio:auto}
+.phone img{border-radius:28px;height:auto;aspect-ratio:390/844}
+.rail img,.shot-row img{aspect-ratio:390/844;box-shadow:none;border:1px solid #d3d6db;border-radius:18px;background:#f3f4f6}
+.feat{border:1px solid transparent}
+a.feat:hover{background:var(--t-g1);border-color:#141517}
+.qr-card{box-shadow:none;border:1px solid var(--t-line);border-radius:12px}
+.eyebrow i,.dark .eyebrow i{width:8px;height:8px;border-radius:50%;background:#e5343f}
+.related a:hover{border-color:#141517}
+.sticky{background:rgba(255,255,255,.94);box-shadow:none;border-top:1px solid var(--t-line)}
+:focus-visible{outline:2px solid #141517}

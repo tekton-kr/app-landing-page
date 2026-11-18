@@ -20,3 +20,5 @@ T-ARCH 현장 앱 다운로드 페이지 — https://download.tarch.kr
 - 이미지 파일을 바꿀 때는 이름을 새로 지으세요. Cloudflare가 이미지를 7일 동안 캐시합니다.
 
 Google Play 정식 출시(2026-11) 후 기본 버튼은 Google Play 스토어 링크이고, APK는 Play 스토어를 쓸 수 없는 휴대폰용 보조 방법입니다.
+## 디자인 (2026-11-18)
+앱 모노 디자인(콘셉트 시안 v5)과 같은 규칙: 흰색·회색·검정만, 빨강은 작은 위험 점에만, 그림자 없음, 모서리 12px·선 1px. 큰 숫자는 D-DIN(`fonts/`, SIL OFL). 앱 화면은 `img/screens/m01~m09-*.webp`(390×844 @2x), 3D 건물은 `img/building-3d-m.webp`.
